@@ -1,5 +1,5 @@
 export default function Home() {
-  // // HTML을 먼저 반환하고, DOM에 추가된 후에 이벤트 리스너를 등록
+  // HTML을 먼저 반환하고, DOM에 추가된 후에 이벤트 리스너를 등록
   setTimeout(() => {
     const landingText = document.getElementById('landing-text')
     if (landingText) {
@@ -81,18 +81,11 @@ export default function Home() {
         outline: none;
         display: inline-block;
       }
-      @property --r {
-        inherits: true;
-        syntax: "<angle>";
-        initial-value: 0deg;
-      }
       @keyframes flow {
         0% {
-          --r: 0deg;
           transform: scale(2.5, 1) rotate(0deg);
         }
         100% {
-          --r: 360deg;
           transform: scale(2.5, 1) rotate(360deg);
         }
       }
@@ -122,8 +115,8 @@ export default function Home() {
         pointer-events: none;
         animation: 50s infinite linear flow;
         -webkit-animation: 50s infinite linear flow;
-        transform: scale(2.5, 1) rotate(var(--r));
-        -webkit-transform: scale(2.5, 1) rotate(var(--r));
+        transform: scale(2.5, 1) rotate(0deg);
+        -webkit-transform: scale(2.5, 1) rotate(0deg);
       }
       
       @keyframes gradient {
