@@ -87,8 +87,21 @@ export default function Home() {
         initial-value: 0deg;
       }
       @keyframes flow {
-        to {
-          --r: 1turn;
+        0% {
+          --r: 0deg;
+          transform: scale(2.5, 1) rotate(0deg);
+        }
+        100% {
+          --r: 360deg;
+          transform: scale(2.5, 1) rotate(360deg);
+        }
+      }
+      @-webkit-keyframes flow {
+        0% {
+          -webkit-transform: scale(2.5, 1) rotate(0deg);
+        }
+        100% {
+          -webkit-transform: scale(2.5, 1) rotate(360deg);
         }
       }
       .water {
@@ -105,9 +118,12 @@ export default function Home() {
         inset: -1000vh;
         transform-origin: 47% 50%;
         backdrop-filter: url(#waves);
+        -webkit-backdrop-filter: url(#waves);
         pointer-events: none;
         animation: 50s infinite linear flow;
+        -webkit-animation: 50s infinite linear flow;
         transform: scale(2.5, 1) rotate(var(--r));
+        -webkit-transform: scale(2.5, 1) rotate(var(--r));
       }
       
       @keyframes gradient {

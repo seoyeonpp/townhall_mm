@@ -201,6 +201,7 @@ export default function Talk() {
       left: 0;
       backface-visibility: hidden;
       h2, p {
+        color: black;
         text-shadow: 1px 2px 2px rgba(0,0,0,0.2);
       }
       h2 {
