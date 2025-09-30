@@ -3,15 +3,17 @@ export default function Home() {
   setTimeout(() => {
     const landingText = document.getElementById('landing-text')
     if (landingText) {
-      landingText.style.opacity = '0'
-      const talkButton = document.getElementById('talk-button')
-      if (talkButton) {
-        talkButton.style.opacity = '1'
-        talkButton.style.height = 'auto'
-        talkButton.style.visibility = 'visible'
-      }
+      landingText.addEventListener('click', () => {
+        landingText.style.opacity = '0'
+        const talkButton = document.getElementById('talk-button')
+        if (talkButton) {
+          talkButton.style.opacity = '1'
+          talkButton.style.height = 'auto'
+          talkButton.style.visibility = 'visible'
+        }
+      })
     }
-  }, 5000)
+  }, 0)
 
   return `
     <main>
