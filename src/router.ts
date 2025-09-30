@@ -1,7 +1,8 @@
 import Home from './pages/home'
+import HomeNeon from './pages/homeNeon'
 import Talk from './pages/talk'
 const routes = {
-  '/': Home,
+  '/': HomeNeon,
   '/talk': Talk,
 }
 
